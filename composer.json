@@ -1,7 +1,10 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -9,8 +12,9 @@
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
         "intervention/image": "^2.5",
-        "laravel/framework": "5.6.*",
-        "laravel/tinker": "^1.0"
+        "laravel/framework": "5.6.39",
+        "laravel/tinker": "^1.0",
+        "spatie/laravel-permission": "^2.12"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -35,8 +39,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {
