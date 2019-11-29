@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
 class AddRelationshipsToProductsTable extends Migration
 {
     /**
@@ -16,10 +14,9 @@ class AddRelationshipsToProductsTable extends Migration
         Schema::table('products', function (Blueprint $table) {
             $table->integer('category_id')->unsigned()->change();
             $table->foreign('category_id')->references('id')->on('categories')
-                    ->onUpdate('cascade')->onDelete('cascade');
+                ->onUpdate('cascade')->onDelete('cascade');
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -27,7 +24,7 @@ class AddRelationshipsToProductsTable extends Migration
      */
     public function down()
     {
-        Schema::table('products', function (Blueprint $table) {
+        Schema::table('products', function(Blueprint $table) {
             $table->dropForeign('products_category_id_foreign');
             $table->dropIndex('products_category_id_foreign');
             $table->integer('category_id')->change();
